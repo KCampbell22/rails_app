@@ -1,0 +1,17 @@
+<aside>
+    <h2>Online Users</h2>
+    <% if @users.present? %>
+        <% @users.each do |user| %>
+            <div class="online-user">
+                <div class="avatar-status">
+                    <img class="user-avatar-small" src="https://avatar.iran.liara.run/public/boy?username=Ash">
+                    <div class="status-circle">
+                </div>
+                </div>
+                
+                <%= link_to user.username, user_path(user) %>
+            </div>
+        <% end %>
+    <% end %>
+</aside>
+                        

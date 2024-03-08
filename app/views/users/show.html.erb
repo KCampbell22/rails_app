@@ -1,0 +1,49 @@
+<div class="profile-wrapper">
+<p id="notice"><%= notice %></p>
+
+<div class="profile-avatar-box">
+    <img class="user-avatar" src="https://avatar.iran.liara.run/public/boy?username=Ash">
+    
+     
+
+
+    <h2><%= @user.username %></h2>
+    <p><%= @user.first_name %></p>
+    <p><%= @user.last_name %></p>
+    <div >
+      <%= link_to 'Edit', edit_user_path(@user) %> |
+      <%= link_to 'Back', users_path %>
+    </div>
+</div>
+<div class="posts">
+  <h2>Posts</h2>
+  <% if @user.posts.count > 0%>
+    <% @user.posts.each do |post| %>
+      <div class="post-card">
+        <div class="post-header">
+          
+          <%= link_to post.user.username, user_path(post.user) %>
+          <div class="post-actions">
+          <%= link_to 'Show', post %>
+          <%= link_to 'Edit', edit_post_path(post) %>
+          <%= button_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+        </div>
+        <div class="post-content">
+          <><%= post.content %></p>
+        </div>
+        
+      </div>
+      <hr>
+    <% end %>
+  <% else %>
+    <p>No posts yet</p>
+    <a href="/posts/new">Create a post!</a>
+  <% end %>
+</div>
+  
+
+
+</div>
+
+

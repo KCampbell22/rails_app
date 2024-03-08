@@ -1,0 +1,347 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ /* general styles */
+ /* i want a underline slowly expanding from the under the link when hovered */
+
+ .row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 3rem;
+ }
+ nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid rgba(180, 180, 180, 0.609);
+    list-style: none;
+    color: black;
+ }
+
+ nav h1{
+    font-size: 2rem;
+    margin-left: 2rem;
+    padding: 0;
+ 
+ }
+ a:hover{
+    text-decoration-color: black;
+    text-underline-offset: 5px;
+    text-decoration-thickness: 2px !important;
+    background-color: transparent;
+    text-decoration: underline;
+    color: black;
+ }
+    body{
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+    html{
+        box-sizing: border-box;
+    }
+
+    nav ul{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+        padding: 10px;
+        background-color: #f4f4f4;
+        border-bottom: 1px solid rgba(180, 180, 180, 0.609);
+        list-style: none;
+        margin-right: 2rem;
+        color: black;
+        max-width: 1000px;
+    }
+
+    nav ul li a, nav ul li a:active, nav ul li a:visited{
+        text-decoration: none;
+        color: black;
+    }
+
+    nav ul li a{
+        transition: 2s all ease-in; /* Moved */
+        text-decoration-color: transparent;
+        color: black;
+    }
+
+.post-home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+hr{
+    border: 1px solid rgb(228 224 224);
+    ;
+    width: 90%;
+}
+.posts{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.posts h2{
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+}
+.post-card{
+    width: 95%;
+    min-height: 225px;    
+    background-color: rgba(219, 219, 219, 0.586);
+    border-radius: 9px;
+}
+
+.post-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+.post-actions{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    width: 20%;
+}
+.post-actions form{
+    background-color: transparent;
+    border: none;
+    width: auto;
+}
+
+.post-actions form input{
+    min-width: 20px;
+}
+
+.profile-wrapper{
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.user-avatar{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    margin: 10px;
+}
+
+.profile-avatar-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 95%;
+    border: 1px solid black;
+    padding: 15px
+}
+
+.posts-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 50px;
+    width: 70%;
+}
+
+.post-content {
+    padding: 2rem;
+    display: flex;
+}
+
+.form-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    
+}
+/* form styles 
+- glassy effect even when the input is focused
+
+
+*/
+
+input, input:focus, input:active, input:hover, textarea, textarea:focus, textarea:active, textarea:hover{
+    border: none;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+    min-width: 200px;
+    /* glassy effect */
+    background: rgba(255, 255, 255, 0.297);
+    border: none;
+    outline: none;
+}
+textarea, textarea:focus, textarea:active, textarea:hover{
+    border: none;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+    min-width: 200px;
+    /* glassy effect */
+    background: rgba(255, 255, 255, 0.297);
+}
+
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.field{
+    
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;}
+
+label{
+    margin-bottom: 10px;
+}
+
+.actions{
+    margin-top: 3rem;
+}
+
+.actions input{
+    min-height: 40px;
+}
+
+
+.main{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.5rem;}
+
+aside{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    max-width: 30%;
+    min-width: 15%;
+    margin: 10px;
+    border-right: 1px solid rgba(180, 180, 180, 0.609);
+
+}
+
+.status-circle{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: green;
+}
+
+.user-avatar-small{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: white;
+    margin: 10px;
+}
+
+.avatar-status{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.online-user{
+    gap: 2rem;
+    width: 98%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgba(180, 180, 180, 0.609);
+    border-top: 1px solid rgba(180, 180, 180, 0.609);
+}
+
+.online-user:hover{
+    background-color: rgba(180, 180, 180, 0.609);
+    cursor: pointer;
+}
+
+
+.post-home-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    padding: 10px;
+    width: 90%;
+}
+
+.post-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+    /*media queries */
+
+    @media screen and (max-width: 425.98px){
+        aside{
+            display: none;
+        }
+         .row{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border-bottom: 1px solid rgba(180, 180, 180, 0.609);
+            list-style: none;
+            color: black;
+            flex-direction: column;
+        }
+
+        .row h1{
+            margin: 10px
+        }
+        .post-header{
+            flex-direction: column;
+        }
+        .post-actions{
+            width: 40%;
+            
+        }
+    }

@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+<div class="post-home">
+    <div class="post-home-header">
+      <h1>Posts</h1>
+      <%= link_to 'New Post', new_post_path %>
+ 
+    </div>
+    <hr>
+  <div class="posts">
+    <% @posts.order(created_at: :desc).each do |post| %>
+      <div class="post-card">
+        <div class="post-header">
+          <%= link_to post.user.username, user_path(post.user) %>
+          <% date = post.updated_at > post.created_at ? post.updated_at : post.created_at %>
+          <%= date.strftime("%B %e, %Y at %I:%M %p") %>
+          <div class="post-actions">
+            <%= link_to 'Show', post %>
+            <%= link_to 'Edit', edit_post_path(post) %>
+            <%= button_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </div>
+        </div>
+        <div class="post-content">
+          <p><%= post.content %></p>
+        </div>
+        
+      </div>
+      <hr>
+    <% end %>
+  </div>
+  <br>
+</div>
+
